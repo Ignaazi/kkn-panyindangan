@@ -1,6 +1,7 @@
 import BootstrapJS from "@/components/BootstrapJS";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import ScrollToTop from "@/components/scrollToTop"; // <-- Impor komponen tombol to top
 import "bootstrap/dist/css/bootstrap.min.css";
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
@@ -48,6 +49,9 @@ export default function RootLayout({
         
         {/* Footer akan selalu ada di paling bawah setiap halaman */}
         <Footer />
+        
+        {/* Tombol Back to Top Kotak Otomatis di Semua Halaman */}
+        <ScrollToTop />
         
         {/* Script Bootstrap JS */}
         <BootstrapJS />
