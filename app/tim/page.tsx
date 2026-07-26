@@ -77,17 +77,20 @@ export default function ProfilTimGrid5Kolom() {
           <div className="text-center mx-auto" style={{ maxWidth: "600px" }}>
             {/* Logo Diperbesar Proporsional (85px) */}
             <div className="d-flex justify-content-center align-items-center gap-3 mb-3">
-              <div className="position-relative" style={{ width: "85px", height: "85px" }}>
+              <div className="position-relative" style={{ width: "120px", height: "120px" }}>
                 <Image src="/assets/img/logoUbp.png" alt="Logo UBP" fill style={{ objectFit: "contain" }} />
               </div>
-              <div className="position-relative" style={{ width: "85px", height: "85px" }}>
-                <Image src="/assets/img/logoDesa.png" alt="Logo Desa" fill style={{ objectFit: "contain" }} />
+              <div className="position-relative" style={{ width: "120px", height: "120px" }}>
+                <Image src="/assets/img/logoDesa1.png" alt="Logo Desa" fill style={{ objectFit: "contain" }} />
               </div>
             </div>
             {/* Judul Utama */}
             <h1 className="fw-black m-0 display-6" style={{ color: isDarkMode ? "#ffffff" : "#1e293b", letterSpacing: "-1.5px" }}>
               Daftar Organisasi KKN
             </h1>
+            <h2 className="fw-black m-0 display-6" style={{ color: isDarkMode ? "#ffffff" : "#1e293b", letterSpacing: "-1.5px" }}>
+                Desa Panyindangan
+            </h2>
           </div>
 
           {/* TOMBOL NAVIGASI < > (Diturunin di atas garis, anti-nabrak) */}

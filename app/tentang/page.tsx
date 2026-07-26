@@ -71,7 +71,7 @@ export default function TentangPage() {
               }}
             >
               <img 
-                src="https://images.unsplash.com/photo-1577416416829-d4368b7b91f1?q=80&w=800" 
+                src="assets/img/fotoTentang.jpg" 
                 alt="Dokumentasi KKN Panyindangan" 
                 className="img-fluid rounded-4 w-100"
                 style={{ objectFit: "cover", height: "340px" }}

@@ -51,12 +51,12 @@ export default function Navbar() {
         {/* ================= LEFT: LOGOS ================= */}
         <div className="d-flex align-items-center gap-3">
           <Link href="/" className="d-flex align-items-center gap-2 text-decoration-none">
-            <Image src="/assets/img/logoUbp.png" alt="Logo UBP" width={36} height={36} style={{ objectFit: "contain" }} />
-            <Image src="/assets/img/logoDesa.png" alt="Logo Desa" width={36} height={36} style={{ objectFit: "contain" }} />
+            <Image src="/assets/img/logoUbp.png" alt="Logo UBP" width={50} height={50} style={{ objectFit: "contain" }} />
+            <Image src="/assets/img/logoDesa1.png" alt="Logo Desa" width={50} height={50} style={{ objectFit: "contain" }} />
             <span 
               className="fw-bold ms-1 brand-title" 
               style={{ 
-                color: isDarkMode ? "#9ca3af" : "#6b7280",
+                color: isDarkMode ? "#9ca3af" : "#4b5563",
                 letterSpacing: "-0.2px",
                 whiteSpace: "nowrap"
               }}
@@ -186,9 +186,9 @@ export default function Navbar() {
                   {[
                     { text: "Tentang", href: "/tentang", icon: "bi-info-circle-fill" },
                     { text: "Profile Tim", href: "/tim", icon: "bi-person-badge-fill" },
-                    { text: "Kebijakan Privasi", href: "/privasi", icon: "bi-shield-lock-fill" },
-                    { text: "Kebijakan Layanan", href: "/layanan", icon: "bi-file-earmark-text-fill" },
-                    { text: "404 Page", href: "/404", icon: "bi-exclamation-triangle-fill" }
+                    { text: "Kebijakan Privasi", href: "/kebijakan/privasi", icon: "bi-shield-lock-fill" },
+                    { text: "Kebijakan Layanan", href: "/kebijakan/layanan", icon: "bi-file-earmark-text-fill" },
+                    { text: "404 Page", href: "/errors/404", icon: "bi-exclamation-triangle-fill" }
                   ].map((subItem, sIdx) => (
                     <Link 
                       key={sIdx} 
@@ -198,7 +198,7 @@ export default function Navbar() {
                         fontSize: "13.5px", 
                         color: isDarkMode ? "#fff" : "#333",
                         padding: "10px 20px", 
-                        gap: "12px"          
+                        gap: "12px"         
                       }}
                     >
                       <i className={`bi ${subItem.icon} fs-5`} style={{ color: themeGreen, flexShrink: 0 }}></i>
@@ -388,9 +388,9 @@ export default function Navbar() {
                 {[
                   { text: "Tentang", icon: "bi-info-circle-fill", href: "/tentang" },
                   { text: "Profile Tim", icon: "bi-person-badge-fill", href: "/tim" },
-                  { text: "Kebijakan Privasi", icon: "bi-shield-lock-fill", href: "/privasi" },
-                  { text: "Kebijakan Layanan", icon: "bi-file-earmark-text-fill", href: "/layanan" },
-                  { text: "404 Page", icon: "bi-exclamation-triangle-fill", href: "/404" }
+                  { text: "Kebijakan Privasi", icon: "bi-shield-lock-fill", href: "/kebijakan/privasi" },
+                  { text: "Kebijakan Layanan", icon: "bi-file-earmark-text-fill", href: "/kebijakan/layanan" },
+                  { text: "404 Page", icon: "bi-exclamation-triangle-fill", href: "/errors/404" }
                 ].map((item, index) => (
                   <Link key={index} href={item.href} className="text-decoration-none py-2 px-3 rounded-2 fw-semibold d-flex align-items-center gap-2 text-hover-green" style={{ fontSize: "13px", color: isDarkMode ? "#e2e8f0" : "#4b5563" }} onClick={() => setIsMobileMenuOpen(false)}>
                     <i className={`bi ${item.icon}`} style={{ fontSize: "14px", color: themeGreen }}></i> {item.text}
