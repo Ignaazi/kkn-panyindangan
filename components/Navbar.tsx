@@ -352,16 +352,37 @@ export default function Navbar() {
             </button>
             {activeDropdown === "project" && (
               <div 
-                className="ps-3 py-1 d-flex flex-column gap-1 rounded-3 mt-1 mx-2"
+                className="ps-3 py-2 d-flex flex-column gap-2 rounded-3 mt-1 mx-2"
                 style={{ backgroundColor: isDarkMode ? "rgba(255, 255, 255, 0.05)" : "rgba(0, 0, 0, 0.03)" }}
               >
                 {[
-                  { text: "Program Kerja", icon: "bi-rocket-takeoff-fill", href: "/proker" },
-                  { text: "Kegiatan", icon: "bi-calendar-event-fill", href: "/kegiatan" },
-                  { text: "Blog", icon: "bi-journal-richtext", href: "/blog" }
+                  { text: "Program Kerja", desc: "Program Kerja KKN.", icon: "bi-rocket-takeoff-fill", gradient: "linear-gradient(135deg, #4ade80, #22c55e)", href: "/proker" },
+                  { text: "Kegiatan", desc: "Kegiatan KKN.", icon: "bi-calendar-event-fill", gradient: "linear-gradient(135deg, #60a5fa, #3b82f6)", href: "/kegiatan" },
+                  { text: "Blog", desc: "Blog KKN.", icon: "bi-journal-richtext", gradient: "linear-gradient(135deg, #fb923c, #f97316)", href: "/blog" }
                 ].map((item, index) => (
-                  <Link key={index} href={item.href} className="text-decoration-none py-2 px-3 rounded-2 fw-semibold d-flex align-items-center gap-2 text-hover-green" style={{ fontSize: "13px", color: isDarkMode ? "#e2e8f0" : "#4b5563" }} onClick={() => setIsMobileMenuOpen(false)}>
-                    <i className={`bi ${item.icon}`} style={{ fontSize: "14px", color: themeGreen }}></i> {item.text}
+                  <Link 
+                    key={index} 
+                    href={item.href} 
+                    className="text-decoration-none py-2 px-2 rounded-3 fw-semibold d-flex align-items-start text-hover-green" 
+                    style={{ fontSize: "13px", color: isDarkMode ? "#e2e8f0" : "#4b5563", gap: "12px" }} 
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {/* Kotak Ikon Warna Gradient Solid iOS Style Sama Seperti Tampilan Desktop */}
+                    <div 
+                      className="rounded-3 d-flex align-items-center justify-content-center text-white shadow-sm" 
+                      style={{ 
+                        width: "40px", 
+                        height: "40px", 
+                        background: item.gradient,
+                        flexShrink: 0 
+                      }}
+                    >
+                      <i className={`bi ${item.icon} fs-5`}></i>
+                    </div>
+                    <div>
+                      <h6 className="fw-bold mb-0.5" style={{ fontSize: "13.5px", letterSpacing: "-0.1px", color: isDarkMode ? "#ffffff" : "#212529" }}>{item.text}</h6>
+                      <p className="text-muted mb-0" style={{ fontSize: "11.5px", lineHeight: "1.35" }}>{item.desc}</p>
+                    </div>
                   </Link>
                 ))}
               </div>

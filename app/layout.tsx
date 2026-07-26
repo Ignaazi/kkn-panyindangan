@@ -1,13 +1,11 @@
-// app/layout.tsx
 import BootstrapJS from "@/components/BootstrapJS";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google"; // <-- 1. Import font resmi Next.js
+import { Nunito } from "next/font/google";
 import "./main.css";
 
-// 2. Konfigurasi Font Nunito secara global
 const nunito = Nunito({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800", "900"],
@@ -27,11 +25,8 @@ export default function RootLayout({
   return (
     <html lang="id" className={nunito.variable}>
       <head>
-        {/* Vendor Stylesheets */}
         <link rel="stylesheet" href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" />
         <link rel="stylesheet" href="/assets/vendor/aos/aos.css" />
-        
-        {/* 3. Library Animasi untuk efek transparan & Dropdown Smooth */}
         <link 
           rel="stylesheet" 
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" 
