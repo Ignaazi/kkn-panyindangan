@@ -1,4 +1,3 @@
-// app/tentang/page.tsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -101,7 +100,7 @@ export default function TentangPage() {
               ].map((item, idx) => (
                 <div key={idx} className="d-flex gap-3 align-items-start">
                   <div 
-                    className="d-flex align-items-center justify-content-center rounded-circle text-white p-2 shadow-sm shadow-sm" 
+                    className="d-flex align-items-center justify-content-center rounded-circle text-white p-2 shadow-sm" 
                     style={{ backgroundColor: harvestGold, width: "34px", height: "34px", flexShrink: 0 }}
                   >
                     <i className="bi bi-check-lg fw-bold" style={{ fontSize: "16px" }}></i>
@@ -120,7 +119,7 @@ export default function TentangPage() {
         <hr style={{ borderColor: isDarkMode ? "#2d3c31" : "#e4ded4" }} className="my-5" />
 
         {/* ================= VISI & MISI CARDS (RUSTIC NATURE STYLE) ================= */}
-        <div className="row g-4">
+        <div className="row g-4 mb-5">
           
           {/* KARTU VISI (HIJAU HUTAN) */}
           <div className="col-md-5 animate__animated animate__fadeInUp">
@@ -139,7 +138,7 @@ export default function TentangPage() {
             </div>
           </div>
 
-          {/* KARTU MISI (KREM/DARK CONTAINER DENGAN OUTLINE ALIK INTERFACE POSTER) */}
+          {/* KARTU MISI (KREM/DARK CONTAINER) */}
           <div className="col-md-7 animate__animated animate__fadeInUp" style={{ animationDelay: "0.1s" }}>
             <div 
               className="p-4 rounded-4 h-100 shadow-sm transition-card" 
@@ -174,6 +173,65 @@ export default function TentangPage() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+
+        </div>
+
+        {/* ================= LOKASI / GOOGLE MAPS KOTAK ================= */}
+        <div className="row g-4 mt-2 animate__animated animate__fadeInUp" style={{ animationDelay: "0.2s" }}>
+          
+          {/* Kolom Info Lokasi */}
+          <div className="col-lg-4">
+            <div 
+              className="p-4 rounded-4 h-100 shadow-sm" 
+              style={{ 
+                backgroundColor: isDarkMode ? "#1d2720" : "#ffffff", 
+                border: `1px solid ${isDarkMode ? "#2d3c31" : "#e4ded4"}`
+              }}
+            >
+              <h4 className="fw-bold mb-4" style={{ color: isDarkMode ? "#ffffff" : forestGreen }}>Titik Lokasi</h4>
+              <p className="text-muted mb-4" style={{ fontSize: "14px", lineHeight: "1.6" }}>
+                Pusat kegiatan KKN kami berpusat di Balai Desa Panyindangan. Jika ada keperluan atau ingin berdiskusi, silakan kunjungi posko kami.
+              </p>
+              
+              <div className="d-flex gap-3 mb-3">
+                <i className="bi bi-geo-alt-fill fs-5" style={{ color: harvestGold }}></i>
+                <div>
+                  <h6 className="fw-bold mb-1" style={{ color: isDarkMode ? "#ffffff" : forestGreen, fontSize: "15px" }}>Alamat Posko</h6>
+                  <p className="mb-0 text-muted" style={{ fontSize: "13.5px" }}>Desa Panyindangan, Jawa Barat, Indonesia</p>
+                </div>
+              </div>
+
+              <div className="d-flex gap-3">
+                <i className="bi bi-clock-fill fs-5" style={{ color: harvestGold }}></i>
+                <div>
+                  <h6 className="fw-bold mb-1" style={{ color: isDarkMode ? "#ffffff" : forestGreen, fontSize: "15px" }}>Jam Operasional Posko</h6>
+                  <p className="mb-0 text-muted" style={{ fontSize: "13.5px" }}>Senin - Sabtu: 08.00 - 16.00 WIB</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Kolom Grid Google Maps */}
+          <div className="col-lg-8">
+            <div 
+              className="rounded-4 overflow-hidden shadow-sm h-100" 
+              style={{ 
+                border: `2px solid ${isDarkMode ? forestGreen : harvestGold}`,
+                minHeight: "300px"
+              }}
+            >
+              {/* Note: Silakan ganti link 'src' iframe di bawah dengan titik kordinat desa yang sebenarnya dari Google Maps */}
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.617637651817!2d107.4913217!3d-6.6941295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e690f0000000001%3A0xc0f1b9b9a5a5a5a!2sDesa%20Panyindangan!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0, minHeight: "300px" }} 
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
 
