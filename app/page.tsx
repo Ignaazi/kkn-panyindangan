@@ -3,6 +3,11 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+// =========================================================================
+// 1. IMPORT KOMPONEN TENTANG YANG BARU LU BUAT DI FOLDER COMPONENTS
+// =========================================================================
+import TentangSection from "@/components/tentangSection";
+
 export default function BerandaPage() {
   const [isDark, setIsDark] = useState(false);
 
@@ -125,7 +130,7 @@ export default function BerandaPage() {
       </div>
 
       {/* ================= CARD METRIK OVERLAPPING (MENUMPUK DI BAWAH) ================= */}
-      <div className="container position-relative" style={{ zIndex: 3, marginTop: "-80px" }}>
+      <div className="container position-relative" style={{ zIndex: 3, marginTop: "-80px", marginBottom: "40px" }}>
         <div className="row g-4 justify-content-center">
           {[
             { 
@@ -202,6 +207,11 @@ export default function BerandaPage() {
           ))}
         </div>
       </div>
+
+      {/* =========================================================================
+      2. MANGGIL KOMPONEN TENTANG (Otomatis tampil di bawah kartu metrik pas di-scroll)
+      ========================================================================= */}
+      <TentangSection />
 
       {/* ================= CUSTOM HOVER STYLES ================= */}
       <style jsx global>{`
